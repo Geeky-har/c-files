@@ -1,0 +1,32 @@
+#include<iostream>
+class student
+{
+	using namespace std;
+ private:
+	char name[10];
+	int rollno;
+	char section;
+ public:
+	void get_data()
+	{
+		
+		cout<<"Enter name,roll number and section"<<endl;
+		cin>>name>>rollno>>section;
+	}
+	void display_data()
+	{
+		cout<<"\n Your name is: "<<name;
+		cout<<"\n Your roll number is: "<<rollno;
+		cout<<"\n Your section is: "<<section;
+	}
+};
+void main()
+{
+	using namespace std;
+	clrscr();
+	student obj;
+	obj.get_data();
+	obj.display_data();
+	getch();
+}
+
