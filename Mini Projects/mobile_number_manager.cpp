@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-typedef map<string, int> phoneBook;
+typedef map<string, string> phoneBook;
 
 phoneBook createBook(){
 	string name;
-	long long number;
+	string number;
 	int n,i;
 	
 	phoneBook phone;
@@ -43,7 +43,7 @@ void dispBook(phoneBook &phone){
 
 void updateBook(phoneBook &phone){
 	string name;
-	long long number;
+	string number;
 	
 	cout<<"Please Enter the persons name: "<<endl;
 	cin>>name;
@@ -58,14 +58,16 @@ void updateBook(phoneBook &phone){
 
 void searchBook(phoneBook &phone){
 	string name;
-	long long number;
+	string number;
 	
 	try{
 	
 	cout<<"Please enter the name of the person whose number you want: "<<endl;
 	cin>>name;
+
+	number = phone[name];
 	
-	if(number = phone[name])
+	if(number == phone[name])
 		cout<<"The Number of "<<name<<" is: "<<number<<endl<<endl;
 		
 	else
