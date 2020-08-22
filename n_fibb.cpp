@@ -7,7 +7,10 @@ int main(){
     cout<<"Enter the nth term for which you want to see the fibonacci number: "<<endl;
     cin>>n;
 
-    if(n == 1)
+    if(n == 0)
+        cout<<"0";
+
+    else if(n == 1)
         cout<<n1;
 
     else if (n == 2)
